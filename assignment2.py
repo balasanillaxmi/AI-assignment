@@ -1,3 +1,6 @@
+#    1.​ Implementation of Best First Search and A* Search.
+
+
 
 class State:
     def __init__(self, position, goal):
@@ -175,4 +178,41 @@ if __name__ == "__main__":
                                 [1, 1, 0]])
 
 
+#      2.​ Output for given test cases
 
+
+
+"""   outputs:
+            1.  grid = [ [0, 1] ,[1, 0] ]
+                Best First Search → Path length: 2, Path: [(0,0), (1,1)]
+                A* Search→ Path length: 2, Path: [(0,0), (1,1)]
+
+            2.  grid = [ [0, 0, 0] ,[1, 1, 0] ,[1, 1, 0] ]
+                Best First Search → Path length: 4, Path: [(0,0), (0,1), (1,2), (2,2)]
+                A* Search→ Path length: 4, Path: [(0,0), (0,1), (1,2), (2,2)]
+                
+            3.  grid = [ [1, 0, 0] ,[1, 1, 0] ,[1, 1, 0] ]
+                Best First Search → Path length: -1
+                A* Search→ Path length: -1
+"""
+
+
+#       A short comparison (1–2 paragraphs) discussing differences in results and performance.​  
+
+
+""" 
+                Best First Search and A* both manage to find paths in the examples, but they work a bit differently.
+            Best First Search only looks at the estimated distance to the goal, so it tends to head straight 
+            toward it as quickly as possible. This can make it faster in some cases, but it doesn’t always 
+            guarantee the shortest path and can get stuck if the greedy choice leads into a dead end. A*, on the
+            other hand, combines the actual distance traveled with the estimated distance left. Because of this, 
+            it explores more carefully and always finds the shortest path when one exists.
+
+                In terms of performance, Best First Search can feel quicker since it expands fewer nodes when the path is obvious, 
+            but it’s less reliable. A* takes a little more work since it keeps track of both the cost so far and the cost ahead, 
+            but this extra effort pays off with guaranteed optimal results. For problems like grid navigation, A* is usually 
+            the safer and more dependable choice.
+
+
+
+""""
