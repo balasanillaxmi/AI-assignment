@@ -1,4 +1,4 @@
-#    1.​ Implementation of Best First Search and A* Search.
+#     1.​ Implementation of Best First Search and A* Search.
 
 
 
